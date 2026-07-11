@@ -1,0 +1,8 @@
+project: go-coap
+target: fuzz_unmarshal_json
+cmds:
+  - cmd: /mayhem/fuzz_unmarshal_json
+    libfuzzer: true
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_unmarshal_json/testsuite

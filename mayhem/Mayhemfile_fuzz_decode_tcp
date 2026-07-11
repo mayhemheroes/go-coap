@@ -1,0 +1,8 @@
+project: go-coap
+target: fuzz_decode_tcp
+cmds:
+  - cmd: /mayhem/fuzz_decode_tcp
+    libfuzzer: true
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_decode_tcp/testsuite
